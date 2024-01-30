@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.se{
+    margin-bottom: 40px;
+}
+
+body{
+    background-color: rgba(76, 69, 69, 0.514);
+}
+
+header{
+    background-color: rgb(232, 227, 227);
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+header h1{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.search{
+    padding: 10px 250px 10px 10px;
+    /* height: 20px; */
+    /* width: 200px; */
+
+}
+
+::placeholder{
+    font-size: 14pt;
+    width: 300px;
+}
+
+.sear{
+    margin-top: 10px;
+    margin-left: 30px;
+    /* width: 300px; */
+}
+
+.sear img{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 40px;
+    top: 8px;
+}
+
+/* вкладки */
+
+.tabs ul{
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    color: white;
+    margin-left: 70px;
+    font-size: 17pt;
+    /* width: 300px; */
+    /* font-weight: bold; */
+}
+
+.tabs{
+    background-color: black;
+    height: 50px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* .tabs {
+    border: 1px solid #666;
+    padding: 10px;
+    margin: 50px;
+}
+ 
+.active {
+    font-weight: bold;
+}
+ 
+ul {
+    padding-left: 0;
+} */
+ 
+.tab, .tab3 {
+    cursor: pointer;
+    display: inline-block;
+    /* border: 1px solid #666; */
+    padding: 10px 30px;
+    /* border-bottom: 1px solid rgb(13, 145, 85); */
+}
+
+/* .tab3{
+    display: block;
+}
+
+.se1{
+    display: none;
+} */
+
+/* блок 1 */
+
+
+.block{
+    background-color: rgb(232, 227, 227);
+    width: 94%;
+    height: 150px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.one{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    display: flex;
+    flex-direction: row; 
+}
+
+.one h3{
+    margin-top: 20px;
+}
+
+.current{
+    margin-left: 30px;
+}
+
+.date{
+    margin-left: 1050px;
+}
+
+.two{
+    margin-left: 150px;
+    /* margin-top: 20px; */
+}
+
+.weather-icon{
+    margin-left: 20px;
+    width: 70px;
+    margin-top: -20px;
+}
+
+.weather-description{
+    margin-top: -10px;
+}
+
+.blo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+.two p{
+    font-size: 13pt;
+    color: gray;
+}
+
+.three{
+    margin-left: 30px;
+}
+
+.three h1{
+    font-size: 32pt;
+    font-weight: normal;
+}
+
+.three p{
+    font-size: 10pt;
+    /* margin-right: 20px; */
+    color: gray;
+}
+
+.four p{
+    font-size: 14pt;
+    color: gray;
+    line-height: 24px;
+    margin-left: 50px;
+}
+
+/* Блок 2 */
+
+.block1{
+    background-color: rgb(232, 227, 227);
+    width: 94%;
+    height: 400px;
+    margin-left: 40px;
+    margin-top: 20px;
+    /* margin-bottom: -40px; */
+}
+
+.hourly{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-left: 30px;
+    padding-top: 20px;
+    /* margin-top: 40px; */
+}
+
+.today{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.pm{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-gap: -60px; */
+    /* width: 600px; */
+}
+
+.tod{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13pt;
+    margin-left: 10px;
+}
+
+.tod1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13pt;
+    margin-right: 10px;
+}
+
+.icon{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.sunny{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.forecast{
+    margin-left: 20px;
+    color: gray;
+}
+hr{
+    margin-top: 10px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.287);
+    height: 1px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.sunny1{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.temp{
+    margin-left: 20px;
+    color: gray;
+}
+
+.sunny2{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.real{
+    margin-left: 20px;
+    color: gray;
+}
+
+.sunny3{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.wind{
+    margin-left: 20px;
+    color: gray;
+}
+
+        /* Блок 3 */
+
+.block2{
+    background-color: rgb(232, 227, 227);
+    width: 94%;
+    height: 230px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.nearby{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.places{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.city{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    /* margin-left: 50px; */
+    background-color: rgba(128, 128, 128, 0.155);
+}
+
+.city p{
+    font-size: 15pt;
+    margin-left: 5px;
+}
+
+.city img{
+    width: 30px;
+    height: 30px;
+}
+
+.im{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 390px;
+}
+
+.city1{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    padding: 10px;
+    /* margin-left: -30px; */
+    /* margin-right: 20px; */
+    margin-top: 20px;
+    /* margin-left: 50px; */
+    background-color: rgba(128, 128, 128, 0.155);
+}
+
+.city1 p{
+    font-size: 15pt;
+    margin-left: 5px;
+}
+
+.city1 img{
+    width: 30px;
+    height: 30px;
+}
+
+.im1{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 370px;
+}
+
+.city2{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    /* margin-left: 50px; */
+    background-color: rgba(128, 128, 128, 0.155);
+}
+
+.city2 p{
+    font-size: 15pt;
+    margin-left: 5px;
+}
+
+.city2 img{
+    width: 30px;
+    height: 30px;
+}
+
+.im2{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 410px;
+}
+
+.city3{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    padding: 10px;
+    /* margin-left: 50px; */
+    /* margin-left: -50px; */
+    margin-top: 20px;
+    /* margin-left: 50px; */
+    background-color: rgba(128, 128, 128, 0.155);
+}
+
+.city3 p{
+    font-size: 15pt;
+    margin-left: 10px;
+}
+
+.city3 img{
+    width: 30px;
+    height: 30px;
+}
+
+.im3{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 350px;
+}
+
+/* 2 вкладка */
+
+.block3{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.tonight{
+    background-color: rgb(232, 227, 227);
+    width: 18%;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.tonight img{
+    margin-left: 40px;
+}
+
+.jun{
+    text-transform: uppercase;
+    color: gray;
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+.cel{
+    font-size: 20pt;
+    margin-bottom: 5px;
+    margin-left: 35px;
+}
+
+.clear{
+    color: gray;
+    margin-left: 35px;
+}
+
+.tonight h3{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 20px;
+}
+
+
+.sun{
+    background-color: rgb(232, 227, 227);
+    width: 18%;
+    height: 200px;
+    margin-left: 15px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.sun img{
+    margin-left: 40px;
+}
+
+.sun h3{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 20px;
+}
+
+
+.mon{
+    background-color: rgb(232, 227, 227);
+    width: 18%;
+    height: 200px;
+    margin-left: 15px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.mon img{
+    margin-left: 40px;
+}
+
+.mon h3{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 20px;
+}
+
+.tue{
+    background-color: rgb(232, 227, 227);
+    width: 18%;
+    height: 200px;
+    margin-left: 15px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.tue img{
+    margin-left: 40px;
+}
+
+.tue h3{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 20px;
+}
+
+
+.wed{
+    background-color: rgb(232, 227, 227);
+    width: 18%;
+    height: 200px;
+    margin-left: 15px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.wed img{
+    margin-left: 40px;
+}
+
+.wed h3{
+    text-transform: uppercase;
+    color: rgb(13, 145, 85);
+    margin-bottom: 10px;
+    margin-left: 35px;
+    padding-top: 20px;
+    width: 50px;
+}
+
+/* Активная вкладка начало */
+.activ, .tab:hover{
+    color: aquamarine;
+}
+
+/* Активная вкладка 2 страница*/
+
+.active, .tab1:hover{
+    background: white;
+}
+

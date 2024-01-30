@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="owfont-regular.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>my weather</h1>
+        <div class="sear">
+        <input class="search" type="text" value="" placeholder="Калуга, Калужская область" id="city">
+        <img src="img/search.png" alt="">
+    </div>
+    </header>
+
+    <main>
+
+        <div class="tabs" id="tabs">
+            <ul>
+                <li class="tab activ" data="1" id="activ">Today</li>
+                <li class="tab" data="2" id="pas">5-day forecast</li>
+            </ul>
+        </div>
+    </main>
+   
+
+    <section class="se" data="1">
+        <div class="tab-body" data="1">
+        <div class="block">
+
+            <div class="one">
+                <div class="current">
+                <h3>current weather</h3>
+                </div>
+                <div class="date">
+                <h3 id="timedisplay"></h3> <!-- текущая дата -->
+                </div>
+            </div>
+
+            <div class="blo">
+            <div class="two">
+                <img class="weather-icon owf"></img><!-- текущая иконка -->
+               
+                <p class="weather-description"></p><!-- текстовое описание -->
+            </div>
+
+            <div class="three">
+                <div class="gradus">
+                    <h1 class="temperature"></h1><!-- текущая температура -->
+                    <p class="real-feel"></p><!-- как ощущается погода -->
+                </div>
+            </div>
+
+            <div class="four">
+                <p class="sunrise">Sunrise:&nbsp;&nbsp;&nbsp;&nbsp;7:04 AM</p>
+                <p class="sunset">Sunset:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5:11 PM</p>
+                <p class="duration">Duration:&ensp;10:07 hr</p>
+            </div>
+        </div>
+        </div>
+            <!-- Блок2 -->
+        <div class="block1">
+
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod">Today</p>
+                    <p class="hour">7pm</p>
+                    <p class="hour1">8pm</p>
+                    <p class="hour2">9pm</p>
+                    <p class="hour3">10pm</p>
+                    <p class="hour4">11pm</p>
+                    <p class="hour5">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon5 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon6 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon7 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon8 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon9 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon10 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description1">Sunny</p>
+                <p class="weather-description2">Sunny</p>
+                <p class="weather-description3">Clear</p>
+                <p class="weather-description4">Clear</p>
+                <p class="weather-description5">Clear</p>
+                <p class="weather-description6">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature5">29&#176;</p>
+                <p class="temperature6">28&#176;</p>
+                <p class="temperature7">28&#176;</p>
+                <p class="temperature8">27&#176;</p>
+                <p class="temperature9">27&#176;</p>
+                <p class="temperature10">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel1">28&#176;</p>
+                <p class="real-feel2">27&#176;</p>
+                <p class="real-feel3">28&#176;</p>
+                <p class="real-feel4">27&#176;</p>
+                <p class="real-feel5">27&#176;</p>
+                <p class="real-feel6">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind1">11 ESE</p>
+                <p class="wind2">9 ESE</p>
+                <p class="wind3">6 SE</p>
+                <p class="wind4">6 ESE</p>
+                <p class="wind5">6 ESE</p>
+                <p class="wind6">7 SE</p>
+            </div>
+        </div>
+
+            <!-- Блок 3 -->
+
+            <div class="block2">
+                <div class="nearby">
+                    <h3>Nearby places</h3>
+                </div>
+
+                <div class="places">
+                <div class="city">
+                    <p>Обнинск</p>
+                    <div class="im">
+                    <img class="weather-icon1 owf" src="img/sun1.svg" alt=""></img>
+                    <p class="temperature1">36&#176;С</p>
+                   </div>
+                </div>
+
+                <div class="city1">
+                    <p>Людиново</p>
+                    <div class="im1">
+                    <img class="weather-icon2 owf" src="img/sun1.svg" alt="">
+                    <p class="temperature2">29&#176;С</p>
+                   </div>
+                </div>
+
+                <div class="city2">
+                    <p>Киров</p>
+                    <div class="im2">
+                    <img class="weather-icon3 owf" src="img/sun1.svg" alt="">
+                    <p class="temperature3">36&#176;С</p>
+                   </div>
+                </div>
+
+                <div class="city3">
+                    <p>Хвастовичи</p>
+                    <div class="im3">
+                    <img class="weather-icon4 owf" src="img/sun1.svg" alt="">
+                    <p class="temperature4">29&#176;С</p>
+                   </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="se1" id="sec" data="2">
+        <div class="tab-body" data="2">
+
+            <!-- блок 1 -->
+            <div class="block3" id="myDIV">
+                <div class="tonight tab1 active" data="1">
+                    <h3>Сегодня вечером</h3>
+                    <p class="jun hour7">jun 30</p>
+                    <img class="weather-icon12 owf" src="img/moon1.svg" alt="">
+                    <p class="cel temperature12">25&#176;С</p>
+                    <p class="clear weather-description8">Clear, Warm</p>
+                </div>
+                    <!-- блок 2 -->
+                <div class="sun tab1" data="2">
+                    <h3 class="days6">Sun</h3>
+                    <p class="jun hour13">jul 01</p>
+                    <img class="weather-icon18 owf" src="img/sun1.svg" alt="">
+                    <p class="cel temperature18">40&#176;С</p>
+                    <p class="clear weather-description14">Clear, Warm</p>
+                </div>
+                     <!-- блок 3 -->
+                    <div class="mon tab1" data="3">
+                    <h3 class="days4">Mon</h3>
+                    <p class="jun hour20">jul 02</p>
+                    <img class="weather-icon25 owf" src="img/sun1.svg" alt="">
+                    <p class="cel temperature25">35&#176;С</p>
+                    <p class="clear weather-description21">Clear, Warm</p>
+                </div>
+                    <!-- блок 4 -->
+                    <div class="tue tab1" data="4">
+                    <h3 class="days2">Tue</h3>
+                    <p class="jun hour27">jul 03</p>
+                    <img class="weather-icon32 owf" src="img/sun1.svg" alt="">
+                    <p class="cel temperature32">38&#176;С</p>
+                    <p class="clear weather-description28">Clear, Warm</p>
+                </div>
+                    <!-- блок 5 -->
+                    <div class="wed tab1" data="5">
+                    <h3 class="days">Wed</h3>
+                    <p class="jun hour34">jul 04</p>
+                    <img class="weather-icon39 owf" src="img/sun1.svg" alt="">
+                    <p class="cel temperature39">36&#176;С</p>
+                    <p class="clear weather-description35">Clear, Warm</p>
+                </div>
+
+            </div>
+
+
+                <!-- блок 1 -->
+                <div class="tab-body1" data="1">
+        <div class="block1">
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod1">Сегодня вечером</p>
+                    <p class="hour6">7pm</p>
+                    <p class="hour8">8pm</p>
+                    <p class="hour9">9pm</p>
+                    <p class="hour10">10pm</p>
+                    <p class="hour11">11pm</p>
+                    <p class="hour12">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon11 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon13 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon14 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon15 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon16 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon17 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description7">Sunny</p>
+                <p class="weather-description9">Sunny</p>
+                <p class="weather-description10">Clear</p>
+                <p class="weather-description11">Clear</p>
+                <p class="weather-description12">Clear</p>
+                <p class="weather-description13">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature11">29&#176;</p>
+                <p class="temperature13">28&#176;</p>
+                <p class="temperature14">28&#176;</p>
+                <p class="temperature15">27&#176;</p>
+                <p class="temperature16">27&#176;</p>
+                <p class="temperature17">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel7">28&#176;</p>
+                <p class="real-feel8">27&#176;</p>
+                <p class="real-feel9">28&#176;</p>
+                <p class="real-feel10">27&#176;</p>
+                <p class="real-feel11">27&#176;</p>
+                <p class="real-feel12">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind7">11 ESE</p>
+                <p class="wind8">9 ESE</p>
+                <p class="wind9">6 SE</p>
+                <p class="wind10">6 ESE</p>
+                <p class="wind11">6 ESE</p>
+                <p class="wind12">7 SE</p>
+            </div>
+        </div>
+    </div>
+          <!-- блок 2 -->
+          <div class="tab-body1" data="2">
+          <div class="block1">
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod days7">Sunday</p>
+                    <p class="hour14">7pm</p>
+                    <p class="hour15">8pm</p>
+                    <p class="hour16">9pm</p>
+                    <p class="hour17">10pm</p>
+                    <p class="hour18">11pm</p>
+                    <p class="hour19">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon19 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon20 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon21 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon22 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon23 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon24 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description15">Sunny</p>
+                <p class="weather-description16">Sunny</p>
+                <p class="weather-description17">Clear</p>
+                <p class="weather-description18">Clear</p>
+                <p class="weather-description19">Clear</p>
+                <p class="weather-description20">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature19">29&#176;</p>
+                <p class="temperature20">28&#176;</p>
+                <p class="temperature21">28&#176;</p>
+                <p class="temperature22">27&#176;</p>
+                <p class="temperature23">27&#176;</p>
+                <p class="temperature24">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel13">28&#176;</p>
+                <p class="real-feel14">27&#176;</p>
+                <p class="real-feel15">28&#176;</p>
+                <p class="real-feel16">27&#176;</p>
+                <p class="real-feel17">27&#176;</p>
+                <p class="real-feel18">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind13">11 ESE</p>
+                <p class="wind14">9 ESE</p>
+                <p class="wind15">6 SE</p>
+                <p class="wind16">6 ESE</p>
+                <p class="wind17">6 ESE</p>
+                <p class="wind18">7 SE</p>
+            </div>
+        </div>
+    </div>
+            <!-- блок 3 -->
+            <div class="tab-body1" data="3">
+            <div class="block1">
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod days5">Monday</p>
+                    <p class="hour21">7pm</p>
+                    <p class="hour22">8pm</p>
+                    <p class="hour23">9pm</p>
+                    <p class="hour24">10pm</p>
+                    <p class="hour25">11pm</p>
+                    <p class="hour26">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon26 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon27 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon28 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon29 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon30 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon31 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description22">Sunny</p>
+                <p class="weather-description23">Sunny</p>
+                <p class="weather-description24">Clear</p>
+                <p class="weather-description25">Clear</p>
+                <p class="weather-description26">Clear</p>
+                <p class="weather-description27">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature26">29&#176;</p>
+                <p class="temperature27">28&#176;</p>
+                <p class="temperature28">28&#176;</p>
+                <p class="temperature29">27&#176;</p>
+                <p class="temperature30">27&#176;</p>
+                <p class="temperature31">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel19">28&#176;</p>
+                <p class="real-feel20">27&#176;</p>
+                <p class="real-feel21">28&#176;</p>
+                <p class="real-feel22">27&#176;</p>
+                <p class="real-feel23">27&#176;</p>
+                <p class="real-feel24">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind19">11 ESE</p>
+                <p class="wind20">9 ESE</p>
+                <p class="wind21">6 SE</p>
+                <p class="wind22">6 ESE</p>
+                <p class="wind23">6 ESE</p>
+                <p class="wind24">7 SE</p>
+            </div>
+        </div>
+    </div>
+        <!-- блок 4 -->
+        <div class="tab-body1" data="4">
+        <div class="block1">
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod days3">Tuesday</p>
+                    <p class="hour28">7pm</p>
+                    <p class="hour29">8pm</p>
+                    <p class="hour30">9pm</p>
+                    <p class="hour31">10pm</p>
+                    <p class="hour32">11pm</p>
+                    <p class="hour33">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon33 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon34 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon35 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon36 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon37 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon38 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description29">Sunny</p>
+                <p class="weather-description30">Sunny</p>
+                <p class="weather-description31">Clear</p>
+                <p class="weather-description32">Clear</p>
+                <p class="weather-description33">Clear</p>
+                <p class="weather-description34">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature33">29&#176;</p>
+                <p class="temperature34">28&#176;</p>
+                <p class="temperature35">28&#176;</p>
+                <p class="temperature36">27&#176;</p>
+                <p class="temperature37">27&#176;</p>
+                <p class="temperature38">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel25">28&#176;</p>
+                <p class="real-feel26">27&#176;</p>
+                <p class="real-feel27">28&#176;</p>
+                <p class="real-feel28">27&#176;</p>
+                <p class="real-feel29">27&#176;</p>
+                <p class="real-feel30">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind25">11 ESE</p>
+                <p class="wind26">9 ESE</p>
+                <p class="wind27">6 SE</p>
+                <p class="wind28">6 ESE</p>
+                <p class="wind29">6 ESE</p>
+                <p class="wind30">7 SE</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- блок 5 -->
+        <div class="tab-body1" data="5">
+        <div class="block1">
+            <div class="hourly">
+                <h3>hourly</h3>
+            </div>
+
+            <div class="today">
+                <div class="pm">
+                    <p class="tod days1">Wednesday</p>
+                    <p class="hour35">7pm</p>
+                    <p class="hour36">8pm</p>
+                    <p class="hour37">9pm</p>
+                    <p class="hour38">10pm</p>
+                    <p class="hour39">11pm</p>
+                    <p class="hour40">12am</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <p></p>
+                <p><img class="weather-icon40 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon41 owf" src="img/sun1.svg" alt=""></p>
+                <p><img class="weather-icon42 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon43 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon44 owf" src="img/moon1.svg" alt=""></p>
+                <p><img class="weather-icon45 owf" src="img/moon1.svg" alt=""></p>
+            </div>
+
+            <div class="sunny">
+                <p class="forecast">Forecast</p>
+                <p class="weather-description36">Sunny</p>
+                <p class="weather-description37">Sunny</p>
+                <p class="weather-description38">Clear</p>
+                <p class="weather-description39">Clear</p>
+                <p class="weather-description40">Clear</p>
+                <p class="weather-description41">Clear</p>
+            </div>
+            <hr>
+
+            <div class="sunny1">
+                <p class="temp">Temp (&#176;С)</p>
+                <p class="temperature40">29&#176;</p>
+                <p class="temperature41">28&#176;</p>
+                <p class="temperature42">28&#176;</p>
+                <p class="temperature43">27&#176;</p>
+                <p class="temperature44">27&#176;</p>
+                <p class="temperature45">27&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny2">
+                <p class="real">RealFeel</p>
+                <p class="real-feel31">28&#176;</p>
+                <p class="real-feel32">27&#176;</p>
+                <p class="real-feel33">28&#176;</p>
+                <p class="real-feel34">27&#176;</p>
+                <p class="real-feel35">27&#176;</p>
+                <p class="real-feel36">26&#176;</p>
+            </div>
+            <hr>
+
+            <div class="sunny3">
+                <p class="wind">Wind (km/h)</p>
+                <p class="wind31">11 ESE</p>
+                <p class="wind32">9 ESE</p>
+                <p class="wind33">6 SE</p>
+                <p class="wind34">6 ESE</p>
+                <p class="wind35">6 ESE</p>
+                <p class="wind36">7 SE</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </section>
+
+
+
+    
+</body>
+</html>
