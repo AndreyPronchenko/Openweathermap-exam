@@ -142,7 +142,7 @@ let sunrise = data.sys.sunrise;
 let datesr = new Date((sunrise + data.timezone)*1000);
 let date = new Date();
 
-let period = date.getHours() >= 12 ? 'PM' : 'AM';
+let period = date.getHours() <= 12 ? 'PM' : 'AM';
 
 datesr = datesr.getUTCHours() + ":" + datesr.getMinutes() + ' ' + period;
 
@@ -153,7 +153,7 @@ let sunset = data.sys.sunset;
 let datess = new Date((sunset + data.timezone)*1000);
 // datess = datess.getUTCHours() + ":" + datess.getMinutes();
 let date1 = new Date();
-let period1 = date1.getHours() <= 12 ? 'PM' : 'AM';
+let period1 = date1.getHours() >= 12 ? 'PM' : 'AM';
 datess = datess.getUTCHours() + ":" + datess.getMinutes() + ' ' + period1;
 Sunset.textContent = 'Sunset:' + ' ' + datess;
 // console.log(getMinutes)
@@ -167,6 +167,7 @@ Sunset.textContent = 'Sunset:' + ' ' + datess;
 // let duration = data.dt;
 let sunset1 = data.sys.sunset;
 let sunrise1 = data.sys.sunrise;
+// let currentDate = new Date();
 let datesd = new Date((sunset1 - sunrise1)*1000);
 datesd = datesd.getUTCHours() + ":" + datesd.getMinutes();
 Duration.textContent = 'Duration:' + ' ' + datesd + ' ' + 'hr';
@@ -435,7 +436,8 @@ let hour1 = data.list[0].dt_txt;
 let month =new Array("янв","февр","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек");
 let dates1 = new Date(hour1 + month);
 let date1 = new Date();
-dates1 = date1.getUTCDate() + date1.getUTCMonth();
+let currentDate = new Date();
+dates1 = currentDate.getUTCDate()-1 + currentDate.getUTCMonth();
 Hour7.textContent = dates1 + ' ' + month[date1.getMonth()];
 
 const iconCode7 = data.list[2].weather[0].icon;
@@ -633,7 +635,7 @@ let date = new Date();
 let currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 1);
 dates = currentDate.getDate();
-Hour13.textContent = dates + ' ' + month[date.getMonth()];
+Hour13.textContent = dates + ' ' + month[currentDate.getMonth()];
 // день недели
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 Days6.textContent = days[date.getDay()+1];
@@ -830,9 +832,9 @@ let month =new Array("янв","февр","мар","апр","май","июн","и
 let dates = new Date(hour + month);
 let date = new Date();
 let currentDate = new Date();
-currentDate.setDate(currentDate.getDate() + 2);
-dates = currentDate.getDate();
-Hour21.textContent = dates + ' ' + month[date.getMonth()+1];
+currentDate.setDate(currentDate.getDate());
+dates = currentDate.getDate()+2;
+Hour21.textContent = dates + ' ' + month[currentDate.getMonth()];
 // день недели
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 Days4.textContent = days[date.getDay()+2];
@@ -1031,11 +1033,11 @@ let date = new Date();
 let currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 3);
 dates = currentDate.getDate();
-Hour28.textContent = dates + ' ' + month[date.getMonth()+1];
+Hour28.textContent = dates + ' ' + month[currentDate.getMonth()];
 // день недели
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 // var now = new Date();
-Days2.textContent = days[date.getDay()+3];
+Days2.textContent = days[currentDate.getDay()+0];
 
 const iconCode27 = data.list[20].weather[0].icon;
 const weatherIconUrl28 = `http://openweathermap.org/img/w/${iconCode27}.png`;
@@ -1055,7 +1057,7 @@ dates1 = date1.getUTCHours() + ' ' + period1;
 Hour29.textContent = dates1;
 // день недели
 let days1 = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-Days3.textContent = days1[date.getDay()+3];
+Days3.textContent = days1[currentDate.getDay()+0];
 
 const iconCode28 = data.list[21].weather[0].icon;
 const weatherIconUrl29 = `http://openweathermap.org/img/w/${iconCode28}.png`;
@@ -1230,10 +1232,10 @@ let date = new Date();
 let currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 4);
 dates = currentDate.getDate();
-Hour35.textContent = dates + ' ' + month[date.getMonth()+1];
+Hour35.textContent = dates + ' ' + month[currentDate.getMonth()];
 // день недели
 let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота','Воскресенье'];
-Days.textContent = days[date.getDay()+4];
+Days.textContent = days[currentDate.getDay()+0];
 
 const iconCode34 = data.list[27].weather[0].icon;
 const weatherIconUrl35 = `http://openweathermap.org/img/w/${iconCode34}.png`;
@@ -1253,7 +1255,7 @@ dates1 = date1.getUTCHours() + ' ' + period1;
 Hour36.textContent = dates1;
 // день недели
 let days1 = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
-Days1.textContent = days1[date.getDay()+4];
+Days1.textContent = days1[currentDate.getDay()+0];
 
 const iconCode35 = data.list[28].weather[0].icon;
 const weatherIconUrl36 = `http://openweathermap.org/img/w/${iconCode35}.png`;
